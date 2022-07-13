@@ -41,6 +41,7 @@ bool Adafruit_I2CDevice::begin(bool addr_detect) {
 
 bool Adafruit_I2CDevice::begin(int sda, int scl, bool addr_detect) {
   Serial.printf("SDA:%d, SCL:%d\n", sda, scl);
+
   _wire->begin(sda, scl);
   _begun = true;
 

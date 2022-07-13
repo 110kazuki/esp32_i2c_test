@@ -67,11 +67,13 @@ Adafruit_ADS1115::Adafruit_ADS1115() {
 /**************************************************************************/
 bool Adafruit_ADS1X15::begin(uint8_t i2c_addr, TwoWire *wire) {
   m_i2c_dev = new Adafruit_I2CDevice(i2c_addr, wire);
-  #ifdef I2C_CUSTOM 
+  //#ifdef I2C_CUSTOM 
     return m_i2c_dev->begin(sda, scl);
+  /*
   #else
     return m_i2c_dev->begin();
   #endif
+  */
 }
 
 /**************************************************************************/
